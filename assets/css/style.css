@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;    
+}
+
 body, html {
     height: 100%;
 }
@@ -24,14 +28,26 @@ body{
     border-radius: 6px;
     padding: 20px 50px;
     box-shadow: rgb(221, 219, 216) 0 0 10px;  
+    width: 30%;
+}
+
+.weather-header {
+    display: flex;
 }
 
 .weather-header ul{
     list-style: none;
-    display: inline-flex;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
     margin: 0;
     padding: 0;
+}
+
+.weather-header ul li{
+    flex: 0 0 calc(50% - 10px); /* Each item takes up 50% of the width minus the gap */
 }
 
 .weather-content {
@@ -50,8 +66,8 @@ body{
 }
 
 .weather-content ul li img {
-    border: 1px solid black;
-    background-color: rgb(182, 182, 182);
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255);
     width: 200px;
     height: 200px;
 }
