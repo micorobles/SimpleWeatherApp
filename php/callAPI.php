@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (
         !$data || empty($data->inputUsername) || empty($data->inputEmail) || empty($data->inputCity)
-        || empty($data->inputLocNumber)
     ) {
 
         respondWithJson(400, array('error' => 'Null Data', 'data' => $data));
@@ -50,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 function getCoordinates($data)
 {
-    $api_url = 'http://api.openweathermap.org/geo/1.0/direct?q=' . urlencode($data->inputCity) . '&limit=' . urlencode($data->inputLocNumber) . '&appid=' . APPID;
+    $api_url = 'http://api.openweathermap.org/geo/1.0/direct?q=' . urlencode($data->inputCity) . '&limit=3&appid=' . APPID;
 
     // Initialize cURL
     $ch = curl_init($api_url);

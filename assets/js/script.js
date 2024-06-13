@@ -16,7 +16,15 @@ $('#getWeatherForm').on('submit', function (e) {
 
     request.then((response) => {
         console.log(response);
+        displayWeather(response);
     }).catch((error) => {
         console.error('Error: ', error);
     }); 
 });
+
+function displayWeather(data) {
+    const coordinates = data.coordinates;
+    const weather = data.currentWeather;
+
+    const name = coordinates
+}
