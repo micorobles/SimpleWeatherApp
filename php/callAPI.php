@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (
         !$data || empty($data->inputUsername) || empty($data->inputEmail) || empty($data->inputCity)
-        || empty($data->inputLocNumber)
     ) {
 
         respondWithJson(400, array('error' => 'Null Data', 'data' => $data));
@@ -27,30 +26,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         respondWithJson(404, array('error' => 'No coordinates found'));
     }
 
-    $firstCoordinate = $coordinates[0];
-    $latitude = $firstCoordinate['lat'];
-    $longitude = $firstCoordinate['lon'];
+    $currentWeathers = [];
 
-    $currentWeather = getCurrentWeather($latitude, $longitude);
-
-    if (is_string($currentWeather)) {
-        respondWithJson(500, array('error' => $currentWeather));
+    for ($i = 0; $i < count($coordinates); $i++) {
+        $currentWeathers[] = getCurrentWeather($coordinates[$i]['lat'], $coordinates[$i]['lon']);
     }
 
-    if (empty($currentWeather)) {
-        respondWithJson(404, array('error' => 'No weather found'));
+    foreach ($currentWeathers as $weather) {
+        if (is_string($weather)) {
+            respondWithJson(500, array('error' => $weather));
+        }
+
+        if (empty($weather)) {
+            respondWithJson(404, array('error' => 'No weather found'));
+        }
     }
 
     respondWithJson(200, array(
         'success' => 'Data received',
         'coordinates' => $coordinates,
-        'currentWeather' => $currentWeather
+        'currentWeathers' => $currentWeathers
     ));
 }
 
 function getCoordinates($data)
 {
-    $api_url = 'http://api.openweathermap.org/geo/1.0/direct?q=' . urlencode($data->inputCity) . '&limit=' . urlencode($data->inputLocNumber) . '&appid=' . APPID;
+    $api_url = 'http://api.openweathermap.org/geo/1.0/direct?q=' . urlencode($data->inputCity) . '&limit=3&appid=' . APPID;
 
     // Initialize cURL
     $ch = curl_init($api_url);
@@ -96,7 +97,7 @@ function getCurrentWeather($lat, $lon)
 
     curl_close($ch);
 
-    $json = json_decode( $weather_response, true);
+    $json = json_decode($weather_response, true);
 
     return $json;
 }

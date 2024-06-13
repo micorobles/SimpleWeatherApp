@@ -1,9 +1,73 @@
+* {
+    box-sizing: border-box;    
+}
+
 body, html {
     height: 100%;
 }
 
 body{
-    display: flex;
+    display: block;
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+.weather-container {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* margin-top: 20px; */
+    margin: 20px 0px;
+    padding-bottom: 20px;
+}
+
+.weather-inner-container {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px 50px;
+    box-shadow: rgb(221, 219, 216) 0 0 10px;  
+    width: 30%;
+}
+
+.weather-header {
+    display: flex;
+}
+
+.weather-header ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.weather-header ul li{
+    flex: 0 0 calc(50% - 10px); /* Each item takes up 50% of the width minus the gap */
+}
+
+.weather-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weather-content ul {
+    list-style: none;    
+    margin: 0;
+    padding: 0;
+}
+
+.weather-content ul li {
+    margin-bottom: 10px;
+}
+
+.weather-content ul li img {
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 200px;
 }
