@@ -11,12 +11,12 @@ $('#getWeatherForm').on('submit', function (e) {
     };
 
     const url = 'callAPI.php';
-    
+
     const request = getWeather(inputData, url);
 
     request.then((response) => {
         console.log(response);
     }).catch((error) => {
-        console.error(error);
-    });
+        console.error('Error: ', error);
+    }); 
 });
