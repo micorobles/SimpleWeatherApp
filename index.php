@@ -43,63 +43,66 @@
 </head>
 
 <body>
-    <section class="vh-100" >
+    <section class="vh-100">
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-9 col-lg-6 col-xl-5">
-                    <img src="assets/img/login_img.jpg"
-                        class="img-fluid" alt="Sample image">
+                    <img src="assets/img/login_img.jpg" class="img-fluid" alt="Sample image">
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-group mb-3">
-                    <span class="input-group-text bg-secondary text-white" id="basic-addon1">@</span>
-                    <input type="email" id="Email" class="form-control" placeholder="Email" aria-label="Email"
-                        aria-describedby="basic-addon1" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text bg-secondary text-white" id="basic-addon1">@</span>
-                        <input type="text" id="City" class="form-control" placeholder="City name" aria-label="City"
-                            aria-describedby="basic-addon1" required>
-                    </div>
-                </div>
-                <!-- <div class="col">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text bg-secondary text-white" id="basic-addon2">0</span>
-                        <input type="text" id="LocNumber" class="form-control" placeholder="Number of locations"
-                            aria-label="LocNumber" aria-describedby="basic-addon2" required>
-                    </div>
-                </div> -->
-            </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="background-color:#eee; padding: 30px; border-radius: 1rem;">
+                    <form>
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
 
-            <div class="d-grid mb-3 mt-3">
-                <button type="submit" class="btn btn-success btn-md">Search City</button>
-            </div>
-        </form>
-    </div>
-    <!-- Weather Results -->
-    <div class="weather-container">
-        <div class="weather-inner-container">
-            <div class="weather-header">
-                <ul>
-                    <li><b>Name: </b>Imus</li>
-                    <li><b>State: </b>Cavite</li>
-                    <li><b>Country: </b>PH</li>
-                </ul>
-            </div>
-            <div class="weather-content">
-                <ul>
-                    <li><img src="https://openweathermap.org/img/wn/02d@2x.png"></li>
-                    <li><b>Description: </b>Scattered Clouds</li>
-                    <li><b>Temperature: </b>302.58</li>
-                    <li><b>Humidity: </b>84</li>
-                </ul>
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                                <i class="fab fa-linkedin-in"></i>
+                            </button>
+                        </div>
+
+                        <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                        </div>
+
+                        <!-- Email input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="email" id="email" class="form-control form-control-lg fs-6" placeholder="Email address" />
+                        </div>
+
+                        <!-- Password input -->
+                        <div data-mdb-input-init class="form-outline mb-3">
+                            <input type="password" id="password" class="form-control form-control-lg fs-6" placeholder="Password" />
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-0">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="rememberMe" />
+                                <label class="form-check-label" for="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="#!" id="forgotPassword" class="text-body">Forgot password?</a>
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-md" style="padding-left: 2.5rem; padding-right: 2.5rem; width: 100%">Login</button>
+                            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!" class="link-danger">Register</a></p>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+
+    </section>
+
     <script src="packages/bootstrap-5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="packages/Jquery/jquery-3.7.1.min.js"></script>
     <script src="assets/js/script.js"></script>
