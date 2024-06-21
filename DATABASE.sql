@@ -1,0 +1,27 @@
+-- Create the database if it does not exist and use it
+CREATE DATABASE IF NOT EXISTS db_weatherapp;
+USE db_weatherapp;
+
+-- Create users table
+CREATE TABLE IF NOT EXISTS users (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    isDeleted BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Create user_actions table
+CREATE TABLE IF NOT EXISTS user_actions (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    userID INT,
+    activity VARCHAR(50) NOT NULL,
+    `location` VARCHAR(50),
+    isDeleted BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (userID) REFERENCES users(ID) 
+);

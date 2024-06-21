@@ -7,48 +7,19 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="packages/bootstrap-5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        #forgotPassword:hover {
-            /* color: red !important; */
-            text-decoration: underline;
-        }
-
-        .divider:after,
-        .divider:before {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #3e3e3e;
-        }
-
-        .h-custom {
-            height: calc(100% - 73px);
-        }
-
-        @media (max-width: 450px) {
-            .h-custom {
-                height: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <section class="vh-100" >
-        <div class="container-fluid h-custom">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-md-9 col-lg-6 col-xl-5">
-                    <img src="assets/img/login_img.jpg"
-                        class="img-fluid" alt="Sample image">
+    <div class="container-md w-50 p-3 bg-dark" style="border-radius: 0.25rem;">
+        <form id="getWeatherForm">
+            <div class="row text-center mb-3">
+                <h1 class="text-white">Get Weather App</h1>
+            </div>
+            <div class="row">
+                <div class="input-group mb-3">
+                    <span class="input-group-text bg-secondary text-white" id="basic-addon1">@</span>
+                    <input type="text" id="Username" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1" required>
                 </div>
             </div>
             <div class="row">
@@ -82,7 +53,7 @@
     </div>
     <!-- Weather Results -->
     <div class="weather-container">
-        <div class="weather-inner-container">
+        <!-- <div class="weather-inner-container">
             <div class="weather-header">
                 <ul>
                     <li><b>Name: </b>Imus</li>
@@ -98,7 +69,7 @@
                     <li><b>Humidity: </b>84</li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
     <script src="packages/bootstrap-5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="packages/Jquery/jquery-3.7.1.min.js"></script>
