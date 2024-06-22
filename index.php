@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="packages/bootstrap-5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <style>
         * {
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: block;
+            align-items: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         a {
@@ -42,15 +49,15 @@
     </style>
 </head>
 
-<body>
-    <section class="vh-100">
+<body style="background-color:white">
+    <section class="vh-100" style="background-color: #B4B4B8;">
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-9 col-lg-6 col-xl-5">
                     <img src="assets/img/login_img.jpg" class="img-fluid" alt="Sample image">
                 </div>
-                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="background-color:#eee; padding: 30px; border-radius: 1rem;">
-                    <form>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="background-color:#C7C8CC; padding: 30px 50px; border-radius: .5rem;">
+                    <form id="loginForm">
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                             <p class="lead fw-normal mb-0 me-3">Sign in with</p>
                             <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
@@ -105,7 +112,7 @@
 
     <script src="packages/bootstrap-5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="packages/Jquery/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/login.js"></script>
     <script src="assets/js/ajax.js"></script>
 </body>
 

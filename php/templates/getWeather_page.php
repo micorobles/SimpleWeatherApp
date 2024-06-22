@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="packages/bootstrap-5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../packages/bootstrap-5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
@@ -71,10 +71,10 @@
             </div>
         </div> -->
     </div>
-    <script src="packages/bootstrap-5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="packages/Jquery/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/ajax.js"></script>
+    <script src="../../packages/bootstrap-5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../packages/Jquery/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/js/getWeather.js"></script>
+    <script src="../../assets/js/ajax.js"></script>
 </body>
 
 </html>
