@@ -1,0 +1,9 @@
+button {
+    background-color: goldenrod !important;
+    border-color: goldenrod !important;
+}
+
+button:hover {
+    background-color: rgba(90, 70, 19, 0.77) !important;
+    border-color: rgba(90, 70, 19, 0.77) !important;
+}

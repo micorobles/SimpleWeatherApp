@@ -12,9 +12,9 @@ $('#getWeatherForm').on('submit', function (e) {
 
     const url = 'callAPI.php';
 
-    const request = getWeather(inputData, url);
+    const getWeather = ajaxRequest(inputData, url);
 
-    request.then((response) => {
+    getWeather.then((response) => {
         console.log(response);
         displayWeather(response);
     }).catch((error) => {

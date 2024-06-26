@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="packages/bootstrap-5.1.3/dist/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/button.css">
     <style>
         * {
             padding: 0;
@@ -41,6 +41,10 @@
             height: calc(100% - 73px);
         }
 
+        .social-btn {
+            width: 60px;
+        }
+        
         @media (max-width: 450px) {
             .h-custom {
                 height: 100%;
@@ -59,27 +63,27 @@
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="background-color:#C7C8CC; padding: 30px 50px; border-radius: .5rem;">
                     <form id="loginForm">
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                            <p class="lead fw-normal mb-0 me-3">Sign in with:</p>
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1 social-btn">
                                 <i class="fab fa-facebook-f"></i>
                             </button>
 
-                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1 social-btn">
                                 <i class="fab fa-twitter"></i>
                             </button>
 
-                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1 social-btn">
                                 <i class="fab fa-linkedin-in"></i>
                             </button>
                         </div>
 
                         <div class="divider d-flex align-items-center my-4">
                             <p class="text-center fw-bold mx-3 mb-0">Or</p>
-                        </div>
+                        </div>  
 
                         <!-- Email input -->
                         <div data-mdb-input-init class="form-outline mb-4">
-                            <input type="email" id="email" class="form-control form-control-lg fs-6" placeholder="Email address" />
+                            <input type="text" id="username" class="form-control form-control-lg fs-6" placeholder="Username" />
                         </div>
 
                         <!-- Password input -->
@@ -100,7 +104,7 @@
 
                         <div class="text-center text-lg-start mt-4 pt-2">
                             <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-md" style="padding-left: 2.5rem; padding-right: 2.5rem; width: 100%">Login</button>
-                            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!" class="link-danger">Register</a></p>
+                            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="php/templates/register_page.php" class="link-danger">Register</a></p>
                         </div>
 
                     </form>
@@ -112,6 +116,7 @@
 
     <script src="packages/bootstrap-5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="packages/Jquery/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/9ee5e62459.js" crossorigin="anonymous"></script>
     <script src="assets/js/login.js"></script>
     <script src="assets/js/ajax.js"></script>
 </body>
